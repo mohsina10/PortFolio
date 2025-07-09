@@ -1,0 +1,48 @@
+.nav-content {
+    max-width: 1300px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1 rem 0; 
+    margin:0 auto; 
+}
+.logo {
+    width: 12 rem; 
+    height:auto;
+}
+.nav-content ul {
+    display: flex;
+    align-items: center;
+    gap:0.5 rem; 
+    list-style: none;
+}
+.nav-content li {
+   margin: 0 1.5rem;
+}
+.menu-item {
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+}
+.menu-item::before {
+    content:"" ;
+    width: 2 rem;
+    height: 0.2 rem; 
+    background: linear-gradient(90deg, #a993fe 0%, #7e61e7 100%);
+    border-radius: 0.5 rem;
+    position: absolute;
+    bottom:-0.6 rem; 
+    opacity:0; 
+    transform: translate(-1.5rem);
+    transition: all 0.3s ease;
+
+}
+.menu-item:hover::before {
+    width:100%;
+    transform: translate(0);
+    opacity: 1;
+
+}
